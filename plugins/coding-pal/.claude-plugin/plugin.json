@@ -1,0 +1,9 @@
+{
+  "name": "coding-pal",
+  "version": "1.0.0",
+  "description": "Development workflow for people who don't write code: requirements, UI, plan, build and acceptance. 让不写代码的人按需求到验收把项目做出来的开发流程。",
+  "author": {
+    "name": "KeelingYU"
+  },
+  "homepage": "https://github.com/KeelingYU/coding-pal"
+}

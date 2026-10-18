@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>验收网页 · coding-pal</title>
+<script>try{var t=localStorage.getItem("pal-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="page">
+  <header class="topbar"><span class="brand"><span class="brand-mark">c<span>p</span></span>coding-pal <span class="brand-divider"></span><span class="brand-sub">验收网页</span></span><span class="local-mark"><span class="dot"></span>本机预览</span></header>
+  <main class="shell">
+    <section class="report-heading"><div class="eyebrow" id="project-name"></div><h1 id="report-title"></h1><p id="headline" class="headline"></p></section>
+    <section class="overview" aria-label="概览">
+      <div class="decision"><span class="section-kicker">你要做的事</span><h2 id="need-text"></h2><p id="need-time"></p><a id="try-link" href="#try" class="text-link">看怎么试 <img class="ui-icon" src="icons/arrow-up-right.svg" alt=""></a></div>
+      <div class="distribution"><div class="distribution-heading"><span class="section-kicker">验收员检查</span><span><b id="checked-count"></b> 项</span></div><div id="status-track" class="status-track" aria-hidden="true"></div><div id="status-legend" class="status-legend"></div><p class="distribution-note">验收员独立检查，每项附证据；你的结论请回到对话里回复。</p></div>
+    </section>
+    <section class="changes" aria-labelledby="changes-heading"><h2 id="changes-heading" class="section-kicker">这次改了什么</h2><ul id="changes" class="change-list"></ul></section>
+    <section id="try" class="block" aria-labelledby="try-heading"><div class="section-heading"><h2 id="try-heading">请你试 <span id="try-count"></span></h2></div><div id="try-list" class="try-list"></div></section>
+    <section class="block items-section" aria-labelledby="items-heading"><div class="list-toolbar"><div class="section-heading"><h2 id="items-heading">验收员已检查 <span id="item-count"></span></h2><span class="quiet">点条目看证据</span></div><div class="filters" role="group" aria-label="筛选检查项"><button class="filter active" data-filter="all" aria-pressed="true">全部 <span></span></button><button class="filter" data-filter="attention" aria-pressed="false">需关注 <span></span></button></div></div><div id="items-list" class="items-list"></div></section>
+    <section id="issues" class="block" aria-labelledby="issues-heading" hidden><div class="section-heading"><h2 id="issues-heading">已知问题</h2></div><div id="issues-list" class="issues-list"></div></section>
+    <details id="details" class="report-guide" hidden><summary><span><span class="section-kicker">技术细节</span><strong>给想深入了解的人看，可以不读</strong></span><span class="guide-toggle">展开查看 <img class="ui-icon" src="icons/chevron-right.svg" alt=""></span></summary><div id="details-text" class="details-text"></div></details>
+    <footer><span id="footer-meta"></span><span>网页只读；验收结论请回到对话里回复</span></footer>
+  </main>
+</div>
+<div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+<section id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1" hidden>
+  <div class="drawer-top"><span id="drawer-index" class="section-kicker"></span><div class="drawer-actions"><button id="prev-item" class="icon-button" aria-label="上一项"><img class="ui-icon" src="icons/arrow-up.svg" alt=""></button><button id="next-item" class="icon-button" aria-label="下一项"><img class="ui-icon" src="icons/arrow-down.svg" alt=""></button><span></span><button id="close-drawer" class="icon-button close-button" aria-label="关闭"><img class="ui-icon" src="icons/x.svg" alt=""></button></div></div>
+  <div class="drawer-body"><div class="drawer-heading"><div id="drawer-badge"></div><h2 id="drawer-title"></h2><p id="drawer-summary"></p></div><h3 class="evidence-title">证据 <span id="evidence-count"></span></h3><div id="evidence-panel"></div><div class="drawer-footnote"><span class="dot"></span>只读网页；浏览不会改变验收结论。</div></div>
+</section>
+<dialog id="image-viewer" aria-labelledby="viewer-title"><div class="viewer-toolbar"><h2 id="viewer-title">截图</h2><div><button id="zoom-image" class="viewer-button">查看原尺寸</button><button id="close-viewer" class="viewer-button" aria-label="关闭图片浏览">关闭</button></div></div><div class="viewer-canvas"></div><div class="viewer-pagination"><button id="previous-image" class="viewer-button" aria-label="上一张">上一张</button><span id="viewer-position" aria-live="polite"></span><button id="next-image" class="viewer-button" aria-label="下一张">下一张</button></div><p>可以用键盘左右方向键切换</p></dialog>
+<noscript><p class="empty-list">请启用 JavaScript 阅读这个验收网页。</p></noscript>
+<script id="report-data" type="application/json">__REPORT_DATA__</script>
+<script src="app.js"></script>
+</body>
+</html>

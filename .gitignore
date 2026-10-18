@@ -1,0 +1,19 @@
+.DS_Store
+__MACOSX/
+CLAUDE.local.md
+
+# 本机配置与凭据
+.env
+.env.*
+!.env.example
+*credential*
+*.key
+.claude/settings.local.json
+.claude/.cc-writes/
+
+# 本机任务、看板与工作副本（pal）
+.worktrees/
+.pal/
+
+# Python 测试的本机缓存
+__pycache__/

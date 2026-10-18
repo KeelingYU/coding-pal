@@ -1,0 +1,18 @@
+{
+  "unit": "字符数（Python len），含标题和表格",
+  "scope": "plugins/coding-pal/skills/coding-pal 下的 SKILL.md、stages/、references/、roles/、templates/",
+  "limits": {
+    "total": 25000,
+    "entry": 3000,
+    "stage": 2000,
+    "action": 8000
+  },
+  "action_means": "入口 + 一个阶段说明 + 它们引用的参考和模板（逐层）；阶段之间的引用不算",
+  "history": [
+    {
+      "date": "2026-10-09",
+      "change": "设定初始上限",
+      "reason": "按新设计逐文件估算约 20,700 字，加 20% 余量；对照 pal-v1 约 12,100 字、5.4.1 约 49,900 字（重建 SPEC 第 12 节）"
+    }
+  ]
+}
